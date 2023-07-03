@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#quotes" onKeyReleased="#home" prefHeight="400.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mylibrary.myreadbookController">
+   <children>
+      <HBox layoutX="13.0" layoutY="273.0" prefHeight="45.0" prefWidth="189.0" spacing="20.0">
+         <children>
+            
+            <Button fx:id="delete" mnemonicParsing="false" onAction="#delete" prefHeight="25.0" prefWidth="65.0" text="delete">
+               <graphic>
+                  <ImageView fitHeight="19.0" fitWidth="16.0">
+                     <image>
+                        <Image url="@../img/icon-delete.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold Italic" size="10.0" />
+               </font></Button>
+            <Button fx:id="update" mnemonicParsing="false" onAction="#update" text="Update">
+               <graphic>
+                  <ImageView fitHeight="13.0" fitWidth="24.0">
+                     <image>
+                        <Image url="@../img/update-icon.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold Italic" size="11.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+      <VBox layoutX="29.0" layoutY="158.0" prefHeight="53.0" prefWidth="157.0">
+         <children>
+            <Label text="number of pages" />
+            <TextField fx:id="text" />
+         </children>
+      </VBox>
+      
+      <HBox alignment="TOP_CENTER" layoutX="173.0" layoutY="23.0" prefHeight="42.0" prefWidth="233.0" style="-fx-border-color: white; -fx-border-radius: 50; -fx-border-width: 2;">
+         <children>
+            <Label text="My Read Books" textAlignment="CENTER">
+               <font>
+                  <Font name="Bodoni MT Condensed" size="36.0" />
+               </font>
+            </Label>
+         </children></HBox>
+      <StackPane layoutX="525.0" layoutY="9.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="53.0" prefWidth="69.0">
+         <children>
+            <Circle fill="#e1e6eb" onMouseEntered="#quotes" radius="17.0" stroke="BLACK" strokeType="INSIDE" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="=&gt;" />
+         </children>
+      </StackPane>
+      <VBox layoutX="217.0" layoutY="172.0" prefHeight="227.0" prefWidth="377.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="27.0" prefWidth="377.0" spacing="50.0">
+               <children>
+                  <Label text="Book" />
+                  <Label text="Number Page" />
+                  <Label text="SDate" />
+                  <Label text="EDate" />
+               </children>
+               <padding>
+                  <Insets right="30.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="183.0" prefWidth="241.0" spacing="15.0">
+               <children>
+                  <ScrollPane nodeOrientation="RIGHT_TO_LEFT" prefHeight="205.0" prefWidth="80.0">
+                     <content>
+                        <ListView fx:id="lvbook" nodeOrientation="LEFT_TO_RIGHT" prefHeight="205.0" prefWidth="71.0" />
+                     </content>
+                  </ScrollPane>
+                  <ScrollPane nodeOrientation="RIGHT_TO_LEFT" prefHeight="183.0" prefWidth="74.0">
+                     <content>
+                        <ListView fx:id="lvpage" nodeOrientation="LEFT_TO_RIGHT" prefHeight="205.0" prefWidth="59.0" />
+                     </content>
+                  </ScrollPane>
+                  <ScrollPane nodeOrientation="RIGHT_TO_LEFT" prefHeight="205.0" prefWidth="80.0">
+                     <content>
+                        <ListView fx:id="lvsdate" nodeOrientation="LEFT_TO_RIGHT" prefHeight="205.0" prefWidth="83.0" />
+                     </content>
+                  </ScrollPane>
+                  <ScrollPane nodeOrientation="RIGHT_TO_LEFT" prefHeight="205.0" prefWidth="80.0">
+                     <content>
+                        <ListView fx:id="lvedate" nodeOrientation="LEFT_TO_RIGHT" prefHeight="205.0" prefWidth="83.0" />
+                     </content>
+                  </ScrollPane>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <StackPane layoutX="8.0" layoutY="9.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="53.0" prefWidth="69.0">
+         <children>
+            <Circle fill="#e1e6eb" radius="17.0" stroke="BLACK" strokeType="INSIDE" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;=" />
+         </children>
+      </StackPane>
+   </children>
+</Pane>

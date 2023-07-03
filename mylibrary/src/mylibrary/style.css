@@ -1,0 +1,28 @@
+
+
+#pane{
+    -fx-background-image: url("/img/imgroot2.jpg");
+  -fx-border-color:steelblue;
+    -fx-border-width:2px 2px 2px 2px;  
+    
+}
+
+Button{
+    -fx-background-color:steelblue;
+
+    -fx-font-weifht:bole;  
+}
+
+TextField,PasswordField,DatePicker,ComboBox{
+    
+    -fx-background-color: white;
+    -fx-border-color:steelblue;
+    -fx-border-width:0px 0px 2px 0px;
+    -fx-text-fill: dimgray;
+    -fx-focus-traversable: false; 
+    
+}
+ListView{
+    -fx-border-width:2px 2px 2px 2px;
+    -fx-border-color:steelblue;
+}
